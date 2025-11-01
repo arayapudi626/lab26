@@ -202,15 +202,14 @@ for (int i = 0; i < OPS; i++){
     }
 }
 
-cout << "Read test: " << avg[0][0] << ", " << avg[0][1] << ", " << avg[0][2];
 
     //output
-    /* cout << left << setw(8) << "Operation" << setw(8) << "Vector" << setw(8) << "List" << setw(8) << "Set" << endl;
+    cout << left << setw(8) << "Operation" << setw(8) << "Vector" << setw(8) << "List" << setw(8) << "Set" << endl;
 
-    cout << setw(8) << "Read" << setw(8) << vecRead << setw(8) << listRead << setw(8) << setRead << endl;
-    cout << setw(8) << "Sort" << setw(8) << vecSort << setw(8) << listSort << setw(8) << setSort << endl;
-    cout << setw(8) << "Insert" << setw(8) << vecInsert << setw(8) << listInsert << setw(8) << setInsert << endl;
-    cout << setw(8) << "Delete" << setw(8) << vecDelete << setw(8) << listDelete << setw(8) << setDelete << endl; */
+    cout << setw(8) << "Read" << setw(8) <<  avg[0][0] << setw(8) <<  avg[0][1] << setw(8) <<  avg[0][2] << endl;
+    cout << setw(8) << "Sort" << setw(8) <<  avg[1][0] << setw(8) <<  avg[1][1] << setw(8) <<  avg[1][2] << endl;
+    cout << setw(8) << "Insert" << setw(8) <<  avg[2][0] << setw(8) <<  avg[2][1] << setw(8) <<  avg[2][2] << endl;
+    cout << setw(8) << "Delete" << setw(8) <<  avg[3][0] << setw(8) <<  avg[3][1] << setw(8) <<  avg[3][2] << endl;
 
     
 /* cout << " vec Read time: " << vecRead << endl;
