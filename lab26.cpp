@@ -204,12 +204,12 @@ for (int i = 0; i < OPS; i++){
 
 
     //output
-    cout << left << setw(8) << "Operation" << setw(8) << "Vector" << setw(8) << "List" << setw(8) << "Set" << endl;
+    cout << left << setw(8) << "Operation" << setw(12) << "Vector" << setw(8) << "List" << setw(8) << "Set" << endl;
 
-    cout << setw(8) << "Read" << setw(8) <<  avg[0][0] << setw(8) <<  avg[0][1] << setw(8) <<  avg[0][2] << endl;
-    cout << setw(8) << "Sort" << setw(8) <<  avg[1][0] << setw(8) <<  avg[1][1] << setw(8) <<  avg[1][2] << endl;
-    cout << setw(8) << "Insert" << setw(8) <<  avg[2][0] << setw(8) <<  avg[2][1] << setw(8) <<  avg[2][2] << endl;
-    cout << setw(8) << "Delete" << setw(8) <<  avg[3][0] << setw(8) <<  avg[3][1] << setw(8) <<  avg[3][2] << endl;
+    cout << setw(8) << "Read" << setw(12) <<  avg[0][0] << setw(8) <<  avg[0][1] << setw(8) <<  avg[0][2] << endl;
+    cout << setw(8) << "Sort" << setw(12) <<  avg[1][0] << setw(8) <<  avg[1][1] << setw(8) <<  avg[1][2] << endl;
+    cout << setw(8) << "Insert" << setw(12) <<  avg[2][0] << setw(8) <<  avg[2][1] << setw(8) <<  avg[2][2] << endl;
+    cout << setw(8) << "Delete" << setw(12) <<  avg[3][0] << setw(8) <<  avg[3][1] << setw(8) <<  avg[3][2] << endl;
 
     
 /* cout << " vec Read time: " << vecRead << endl;
@@ -232,10 +232,3 @@ cout << " set delete time: " << setDelete << endl; */
 
     return 0;
 }
-
-/* syntax examples:
-auto start = high_resolution_clock::now()
-auto end = high_resolution_clock::now()
-auto duration = duration_cast<milliseconds>(end - start)
-duration.count() references elapsed milliseconds
-*/
