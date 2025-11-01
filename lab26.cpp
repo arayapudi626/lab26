@@ -186,7 +186,7 @@ times[0][3][0] = deleteVector(vec);
 times[0][3][1] = deleteList(lst);
 times[0][3][2] = deleteSet(st);
 
-//into average layer
+//into layer to gather total
 for (int i = 0; i < OPS; i++){
     for (int j = 0; j < TYPE; j++){
         times[1][i][j] += times[0][i][j];
@@ -194,7 +194,15 @@ for (int i = 0; i < OPS; i++){
 }
 }
 
-int avg;
+// average value into total layer
+int avg[OPS][TYPE];
+for (int i = 0; i < OPS; i++){
+    for (int j = 0; j < TYPE; j++){
+        avg[i][j] = times[1][i][j] / RUNS;
+    }
+}
+
+cout << "Read test: " << avg[0][0] << ", " << avg[0][1] << ", " << avg[0][2];
 
     //output
     /* cout << left << setw(8) << "Operation" << setw(8) << "Vector" << setw(8) << "List" << setw(8) << "Set" << endl;
