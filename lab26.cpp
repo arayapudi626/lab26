@@ -13,6 +13,7 @@ using namespace std::chrono;
 const int RUNS = 15;
 const int OPS = 4;
 const int TYPE = 3;
+const int LAYER = 2;
 
 //READING
 int readVector(string& filename, vector<string>& vec){
@@ -157,7 +158,7 @@ int main() {
 
 string file = "codes.txt";
 
-int times[][OPS][TYPE] = {0};
+int times[LAYER][OPS][TYPE] = {0};
 
 for (int i = 0; i < RUNS; i++){
 vector<string> vec;
@@ -165,13 +166,14 @@ list<string> lst;
 set<string> st;
 }
 
-int vecRead = readVector(file, vec);
-int listRead = readList(file, lst);
-int setRead = readSet(file, st);
 
-int vecSort = sortVector(vec);
-int listSort = sortList(lst);
-int setSort = sortSet(st);
+times[0][0][0] = readVector(file, vec);
+times[0][0][1] = readList(file, lst);
+times[0][0][2] = readSet(file, st);
+
+times[0][1][0] = sortVector(vec);
+times[0][1][1] = sortList(lst);
+times[0][1][2] = sortSet(st);
 
 string insert = "HI";
 int vecInsert = insertVector(vec, insert);
