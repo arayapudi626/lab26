@@ -160,11 +160,13 @@ string file = "codes.txt";
 
 int times[LAYER][OPS][TYPE] = {0};
 
+cout << "Number of Simulations: " << RUNS << "\n";
+
 for (int i = 0; i < RUNS; i++){
 vector<string> vec;
 list<string> lst;
 set<string> st;
-}
+
 
 
 times[0][0][0] = readVector(file, vec);
@@ -176,22 +178,31 @@ times[0][1][1] = sortList(lst);
 times[0][1][2] = sortSet(st);
 
 string insert = "HI";
-int vecInsert = insertVector(vec, insert);
-int listInsert = insertList(lst, insert);
-int setInsert = insertSet(st, insert);
+times[0][2][0] = insertVector(vec, insert);
+times[0][2][1] = insertList(lst, insert);
+times[0][2][2] = insertSet(st, insert);
    
-int vecDelete = deleteVector(vec);
-int listDelete = deleteList(lst);
-int setDelete = deleteSet(st);
+times[0][3][0] = deleteVector(vec);
+times[0][3][1] = deleteList(lst);
+times[0][3][2] = deleteSet(st);
 
+//into average layer
+for (int i = 0; i < OPS; i++){
+    for (int j = 0; j < TYPE; j++){
+        times[1][i][j] += times[0][i][j];
+    }
+}
+}
+
+int avg;
 
     //output
-    cout << left << setw(8) << "Operation" << setw(8) << "Vector" << setw(8) << "List" << setw(8) << "Set" << endl;
+    /* cout << left << setw(8) << "Operation" << setw(8) << "Vector" << setw(8) << "List" << setw(8) << "Set" << endl;
 
     cout << setw(8) << "Read" << setw(8) << vecRead << setw(8) << listRead << setw(8) << setRead << endl;
     cout << setw(8) << "Sort" << setw(8) << vecSort << setw(8) << listSort << setw(8) << setSort << endl;
     cout << setw(8) << "Insert" << setw(8) << vecInsert << setw(8) << listInsert << setw(8) << setInsert << endl;
-    cout << setw(8) << "Delete" << setw(8) << vecDelete << setw(8) << listDelete << setw(8) << setDelete << endl;
+    cout << setw(8) << "Delete" << setw(8) << vecDelete << setw(8) << listDelete << setw(8) << setDelete << endl; */
 
     
 /* cout << " vec Read time: " << vecRead << endl;
