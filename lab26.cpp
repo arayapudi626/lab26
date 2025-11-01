@@ -1,3 +1,5 @@
+//COMSC 210 | Lab 26 | Anisha Rayapudi
+//IDE used: VS 2022
 #include <iostream>
 #include <chrono>
 #include <fstream>
@@ -10,6 +12,7 @@
 using namespace std;
 using namespace std::chrono;
 
+//dimensions
 const int RUNS = 15;
 const int OPS = 4;
 const int TYPE = 3;
@@ -28,7 +31,6 @@ vec.clear();
     }
     auto end = high_resolution_clock::now();
     return duration_cast<microseconds>(end-start).count();
-   // cout << "TIME: " << duration.count();
 
 }
 
@@ -167,7 +169,7 @@ vector<string> vec;
 list<string> lst;
 set<string> st;
 
-
+// reading, sorting, inserting and deleting timings of each container
 
 times[0][0][0] = readVector(file, vec);
 times[0][0][1] = readList(file, lst);
